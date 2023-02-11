@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-8 col-md-6 col-lg-3" *ngFor="let member of members">
+            <div class="card bs-card-grid">
+                <div class="card-header">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <div class="me-3">
+                            <img class="rounded-circle" src="{{member['profilePhoto']}}" width="40">
+                        </div>
+                        <div>
+                            <p class="p-0 m-0 fw-bold">{{member['name']}}</p>
+                            <p class="p-0 m-0">{{member['organization']}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque saepe fugiat totam, esse et quas quo ducimus ipsum iusto ab.
+                    </p>
+                    <p class="p-0 m-0 fw-bold">Roles:</p>
+                    <div class="d-flex flex-wrap justify-content-start">
+                        <span class="badge bg-secondary tt-chip" *ngFor="let role of member['roles']">{{role}}</span>
+                    </div>
+                    <hr>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-sm btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="list-group">
+            <li class="list-group-item" *ngFor="let imageref of refs['images']">{{imageref['name']}}</li>
+        </div>
+    </div>
+</div>

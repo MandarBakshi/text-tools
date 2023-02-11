@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row d-flex justify-content-center" *ngIf="featuresListDisplay">
+        <div class="col-sm-8 col-md-6 col-lg-4">
+            <h5>{{featuresListDisplay['title']}}</h5>
+            <div class="list-group">
+                <div *ngFor="let tool of featuresListDisplay['tools']">
+                    <a class="list-group-item list-group-item-action" routerLink="{{tool['link']}}">{{tool['title']}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

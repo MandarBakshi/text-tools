@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-sm-8 col-md-6 col-lg-3" *ngFor="let feature of featuresDisplay">
+            <div class="card bs-card-grid">
+                <h6 class="card-header fw-bold text-center">{{feature['title']}}</h6>
+                <div class="card-body">
+                    <div class="tt-card-features">
+                        <p>
+                            {{feature['description']}}
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="d-grid gap-2">
+                        <a routerLink="/feature-details" [queryParams]="feature['query']" class="btn btn-sm btn-success">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
