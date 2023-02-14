@@ -38,18 +38,23 @@ export class AboutComponent {
     },
   ]
 
-  refs: any = {
-    'images': [
-      {
-        'name': 'Freepik',
-        'link': 'https://www.freepik.com'
-      },
-      {
-        'name': 'unDraw',
-        'link': 'https://undraw.co'
-      },
-    ]
-    // 'coding': []
-  };
+  refs: any = [
+    {
+      'name': 'Freepik',
+      'link': 'https://www.freepik.com'
+    },
+    {
+      'name': 'unDraw',
+      'link': 'https://undraw.co'
+    },
+    {
+      'name': 'Python docs',
+      'link': 'https://docs.python.org/3/'
+    },
+    {
+      'name': 'Angular docs',
+      'link': 'https://angular.io/docs'
+    },
+  ];
 
 }

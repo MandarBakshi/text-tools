@@ -22,8 +22,12 @@ const routes: Routes = [
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'utils/summarization', component: SummarizationComponent},
+
+  // pdf tools
+  //#region pdf tools
   {path: 'utils/conversion/pdf-to-text', component: PdfToTextComponent},
   {path: 'utils/conversion/pdf-to-word', component: PdfToWordComponent},
+  //#endregion
 
   {path: '**', component: PageNotFoundComponent}
 ];

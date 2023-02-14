@@ -1,1 +1,20 @@
-<p>summarization works!</p>
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div class="my-3">
+            <label class="form-label">Generate summary from</label>
+            <select class="form-select" [(ngModel)]="summaryType">
+                <option value="text">Text</option>
+                <option value="pdf">PDF</option>
+                <option value="url">URL</option>
+            </select>
+        </div>
+    </div>
+
+    <div>
+        <div [ngSwitch]="summaryType">
+            <app-summary-from-text *ngSwitchCase="'text'"></app-summary-from-text>
+            <app-summary-from-pdf *ngSwitchCase="'pdf'"></app-summary-from-pdf>
+            <app-summary-from-url *ngSwitchCase="'url'"></app-summary-from-url>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+.bs-card {
+    margin: 20px;
+    min-height: 225px;
+}
+
+.bs-card-scrollable-content {
+    overflow-y: scroll;
+    max-height: 280px;
+    margin: 10px;
+    padding: 5px;
+}

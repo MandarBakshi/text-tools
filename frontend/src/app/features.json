@@ -1,0 +1,65 @@
+{
+    "summarization": {
+        "title": "summarization",
+        "link": "/feature-details",
+        "queryparams": {"category": "summarization"},
+        "tools": [
+            {
+                "title": "Extractive Summarization",
+                "link": "/utils/summarization"
+            },
+            {
+                "title": "Abstractive Summarization",
+                "link": "/utils/summarization"
+            }
+        ]
+    },
+
+    "conversion": {
+        "title": "Conversion",
+        "link": "/feature-details",
+        "queryparams": {"category":"conversion"},
+        "tools": [
+            {
+                "title": "PDF to Text",
+                "link": "/utils/conversion/pdf-to-text"
+            },
+            {
+                "title": "PDF to WORD",
+                "link": "/utils/conversion/pdf-to-word"
+            },
+            {
+                "title": "PDF to ODT",
+                "link": "/utils/conversion/pdf-to-odt"
+            },
+            {
+                "title": "PDF merge",
+                "link": "/utils/conversion/pdf-merge"
+            }
+        ]
+    },
+
+    "classification": {
+        "title": "Classification",
+        "link": "/feature-details",
+        "queryparams": {"category":"classification"},
+        "tools": [
+            {
+                "title": "Spam detection",
+                "link": "/utils/classification/spam-detection"
+            },
+            {
+                "title": "Sentiment analysis",
+                "link": "/utils/classification/sentiment-analysis"
+            },
+            {
+                "title": "PDF to ODT",
+                "link": "/utils/conversion/pdf-to-odt"
+            },
+            {
+                "title": "PDF merge",
+                "link": "/utils/conversion/pdf-merge"
+            }
+        ]
+    }
+}
