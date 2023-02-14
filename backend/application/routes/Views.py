@@ -63,7 +63,22 @@ def handleTextSummary():
         formData = request.get_json()
         fileName = str(uuid.uuid4())
         from ..utils.summarization.summary_from_text import fGenarateSummary
-        res = fGenarateSummary(formData['pdf'], formData['length'], fileName)
+        res = fGenarateSummary(formData['txt'], formData['length'], fileName)
+
+        return jsonify(res)
+
+
+
+@views.route('/api/summary/extractive-lex/', methods=['POST'])
+def handleTextSummarylex():
+    if request.method == 'POST':
+        formData = request.get_json()
+        # print(formData)
+        fileName = str(uuid.uuid4())
+        # from ..utils.summarization.summary_from_text import fGenarateSummary
+        # res = fGenarateSummary(formData['txt'], formData['length'], fileName)
+        from ..utils.summarization.lex import extractive_summarization
+        res = extractive_summarization(formData['txt'], int(formData['length']), fileName)
 
         return jsonify(res)
 

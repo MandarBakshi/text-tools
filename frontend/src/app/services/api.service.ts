@@ -25,7 +25,7 @@ export class ApiService {
   }
 
   getSummaryText(formData: any) {
-    let destUrl = `${this.baseUrl}/api/summary/extractive/`;
+    let destUrl = `${this.baseUrl}/api/summary/extractive-lex/`;
     let res = this.http.post(destUrl, formData);
 
     return res;

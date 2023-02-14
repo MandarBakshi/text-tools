@@ -35,6 +35,23 @@ export class SummaryFromTextComponent implements OnInit, OnDestroy {
     );
   }
 
-  OnSubmit(): void {}
+  OnSubmit(): void {
+    this.isLoading = true;
+    this.txtResult = undefined;
+    this.sub = this.api.getSummaryText(this.txtSummaryForm?.value).subscribe(
+      {
+        next: (res: any) => {
+          this.isLoading = false;
+          this.downloadLink = res['download_link'];
+          this.txtResult = res['txt_output'];
+        },
+        error: (err: any) => {
+          console.log(err);
+          this.isLoading = false;
+          this.downloadLink = undefined;
+        }
+      }
+    );
+  }
 
 }
